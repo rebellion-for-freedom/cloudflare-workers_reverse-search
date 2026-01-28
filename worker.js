@@ -1,4 +1,4 @@
-const ORIGIN = 'https://rebel-search.onrender.com';
+const ORIGIN = 'https://orsons-snorlax.vercel.app';
 
 export default {
   async fetch(request, env, ctx) {
