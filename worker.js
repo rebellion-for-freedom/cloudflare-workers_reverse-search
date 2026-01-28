@@ -1,4 +1,4 @@
-const ORIGIN = 'https://scramjet.mercurywork.shop/';
+const ORIGIN = 'https://demo-opensource.rammerhead.org/';
 
 export default {
   async fetch(request, env, ctx) {
