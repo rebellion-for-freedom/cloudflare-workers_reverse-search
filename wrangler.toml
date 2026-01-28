@@ -1,0 +1,40 @@
+# Basic Worker metadata
+name = "rebel-search"               # Change this to your preferred Worker name
+main = "index.js"                            # Entry point file (must exist in your project root)
+compatibility_date = "2025-01-01"            # Use a recent date for latest stable runtime behavior
+
+# Recommended flags for better performance & modern features
+compatibility_flags = [
+  "nodejs_compat",                           # If you ever use Node.js-style APIs
+  "streamable_response_body",                # Helps with streaming responses (good for proxy)
+]
+
+# Optional: If you want to use environments (dev/staging/prod)
+#[env.production]
+#  name = "orsons-snorlax-proxy-prod"
+#  compatibility_date = "2025-01-01"
+
+#[env.staging]
+#  name = "orsons-snorlax-proxy-staging"
+
+# Routes (uncomment and customize if using a custom domain)
+# These tell Cloudflare to route traffic to your Worker
+# routes = [
+#   { pattern = "proxy.yourdomain.com/*", zone_name = "yourdomain.com", custom_domain = true }
+# ]
+# For *.workers.dev testing, you don't need routes — just deploy and use the auto URL
+
+# Optional: Environment variables (if you want to make the target configurable)
+[vars]
+  TARGET_URL = "https://rebel-search.onrender.com/"
+
+# If you later add static assets (e.g. a custom 404 page or favicon)
+#[site]
+#  bucket = "./public"          # folder with static files
+#  entry-point = "index.js"
+
+# If you want to enable durable objects, KV, etc. later — add them here
+# e.g.
+# kv_namespaces = [
+#   { binding = "MY_KV", id = "your-kv-id-here" }
+# ]
