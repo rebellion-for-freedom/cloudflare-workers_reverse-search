@@ -1,4 +1,4 @@
-const ORIGIN = 'https://emeralder.chickenkiller.com/';
+const ORIGIN = 'http://gim.lindeblad.se/';
 
 export default {
   async fetch(request, env, ctx) {
